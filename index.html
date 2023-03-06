@@ -1,12 +1,180 @@
- <!DOCTYPE HTML>
-<html>
-
+<!DOCTYPE html>
+<html lang="pl">
 <head>
-<title>help.serviceparts</title>
+    <meta charset="UTF-8">
+    <title>Arkadia</title>
+    <link rel="stylesheet" href="layout.css">
 </head>
 
-<body>
-<h1>Hello</h1>
-</body>
 
+<body onload="Version1()">
+<header>
+    <h1>Moja podróż do Arkadii</h1>
+</header>
+
+<section>
+    <nav>
+        <ul>
+            <li onclick="Version1()">Podstawowe informacje</li>
+
+            <li onclick="Version2()">Mapa</li>
+            <li onclick="Version3()">Dojazd</li>
+            <li onclick="Version4()">Galeria</li>
+            <li onclick="Version5()">Formularz kontaktowy</li>
+        </ul>
+        <ul>
+            <li><a href = "https://pl.wikipedia.org/wiki/Arkadia_(powiat_%C5%82owicki)" target = _blank>Arkadia (wikipedia)</a></li>
+            <li><a href = "https://pomyslynawyprawy.pl/nieborow-i-arkadia-mazowsze/" target = _blank>Przydatny artykuł</a></li>
+        </ul>
+
+    </nav>
+    <article>
+        <div id = "strona1" class = "main">
+            <h1>Podstawowe informacje</h1>
+            <p>Arkadia – wieś położona niedaleko Łowicza, w województwie łódzkim, w powiecie łowickim, w gminie Nieborów, nad rzeką Skierniewką. <br> W 1777 wieś została zakupione przez Helenę Radziwiłłową, żonę Michała Hieronima Radziwiłła, właściciela pobliskiego Nieborowa.
+                W roku 1778 księżna Helena zainicjowała budowę parku Arkadia. <br> <br>
+                <img src="images/Arkadia2.jpg" alt="akwedukt" class="inline"/>
+            </p>
+            <h1>Budowle w parku</h1>
+            <p>Budowle powstałe w parku to między innymi:
+
+
+            <ul>
+                <li>Grota Sybilli</li>
+                <li> Domek Gotycki</li>
+            <li>Łuk Kamienny (Łuk Grecki)</li>
+            <li>Dom Murgrabiego</li>
+            <li>Świątynia Diany (z plafonem J.P. Norblina Jutrzenka)</li>
+            <li>Akwedukt</li>
+            <li>Przybytek Arcykapłana (z płaskorzeźbą G. Staggi Nadzieja karmiąca Chimerę)</li>
+            <li>Mur z Hermami</li>
+            <li>Cyrk</li>
+
+            </ul>
+            </p>
+        </div>
+
+        <div id = "strona2" class = "main">
+            <h1>Mapa</h1>
+            <p>Do Arkadii można dojechać koleją (przystanek Mysłaków) lub samochodem</p>
+
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19612.595412305633!2d19.948103584743762!3d52.087476580835016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471be6bbc5503cfb%3A0x43da36051e9f8a8d!2zTXlzxYJha8Ozdw!5e0!3m2!1spl!2spl!4v1677959929377!5m2!1spl!2spl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                width="400"
+                height="300"
+                frameborder="0"
+                style="border:0;"
+                allowfullscreen=""
+                aria-hidden="false"
+                tabindex="0">
+            </iframe>
+        </div>
+
+        <div id = "strona3" class = "main">
+          <h1>Dojazd</h1>
+            <p>
+            <ul>
+            <li>
+
+                <button onclick="window.open('https://rozklad.pkp.pl/','_blank');" type="button">
+                    Rozkłady PKP</button>
+            </li>
+
+            <li>
+                <button onclick="window.open('https://jakdojade.pl/lista-miast','_blank');" type="button">
+                    JakDojadePL </button>
+
+            </li>
+
+            </ul>
+            <img src="images/Lawka.jpg" alt="akwedukt" class="inline"/>
+            </p>
+        </div>
+
+        <div id = "strona4">
+            <h1>Galeria zdjęć</h1>
+            <div class = gallery> <div class = "responsive">
+                <img src="images/Kosciol.jpg" alt="kosciol" width = 600 height = 400/>
+              <img src="images/Luk.jpg" alt="luk" width = 600 height = 400/>
+             <img src="images/Park.jpg" alt="park" width = 600 height = 400/>
+             <img src="images/Rzeka.jpg" alt="rzeka" width = 600 height = 400/>
+            <img src="images/Lawka.jpg" alt="lawka" width = 600 height = 400/>
+            </div></div>
+        </div>
+
+        <div id = "strona5">
+
+            <form action="mailto:joannan@student.agh.edu.pl" method="post" enctype="text/plain">
+
+                Twoje Imię:<br>
+                <input type="text" name="name" placeholder="twoje imię"><br>
+                Twój E-mail:<br>
+                <input type="text" name="mail" placeholder="twój mail"><br>
+                Twoja wiadomość:<br>
+
+                <textarea name="body" size="200" placeholder="twoja wiadomość" rows="20"></textarea>
+                <br>
+                <input type="reset" value="Wyczyść pola">
+                <input type="submit" value="Wyślij wiadomość">
+
+
+
+            </form>
+        </div>
+
+    </article>
+    <footer><p><a href="https://pl.wikipedia.org/wiki/Arkadia_(powiat_%C5%82owicki)">Informacje na podstawie wikipedia.pl</a></p></footer>
+</section>
+
+<script>
+var divOne = document.getElementById('strona1');
+var divTwo = document.getElementById('strona2');
+var divThree = document.getElementById('strona3');
+var divFour = document.getElementById('strona4');
+var divFive = document.getElementById('strona5');
+
+function Version1(){
+  divTwo.style.display ='none';
+  divThree.style.display ='none';
+  divOne.style.display ='block';
+  divFour.style.display ='none';
+  divFive.style.display ='none';
+}
+
+function Version2(){
+  divTwo.style.display ='block';
+  divOne.style.display ='none';
+  divThree.style.display ='none';
+  divFour.style.display ='none';
+  divFive.style.display ='none';
+}
+
+function Version3(){
+  divTwo.style.display ='none';
+  divOne.style.display ='none';
+  divThree.style.display ='block';
+  divFour.style.display ='none';
+  divFive.style.display ='none';
+}
+
+function Version4(){
+  divTwo.style.display ='none';
+  divOne.style.display ='none';
+  divThree.style.display ='none';
+  divFour.style.display ='block';
+  divFive.style.display ='none';
+}
+
+function Version5(){
+  divTwo.style.display ='none';
+  divOne.style.display ='none';
+  divThree.style.display ='none';
+  divFour.style.display ='none';
+  divFive.style.display ='block';
+}
+
+</script>
+
+
+</body>
 </html>
